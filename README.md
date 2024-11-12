@@ -1,7 +1,3 @@
-Here's a simple and clear **README** file for your graduate project:
-
----
-
 # Arabic Text Extraction Web Application
 
 This project is a web application that uses AI to extract Arabic text from images. The model is built on Google Tesseract OCR, which has been enhanced with a custom training method. The backend is built with Flask, and the frontend is developed with React.
@@ -63,7 +59,3 @@ This project is a web application that uses AI to extract Arabic text from image
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Feel free to adjust any section or add more details specific to your project!
