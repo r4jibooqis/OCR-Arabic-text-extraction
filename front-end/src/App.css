@@ -1,0 +1,287 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.App {
+  height: 125vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #deeeff;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+/************* Navbar component   ************/
+
+.nav-header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 20px;
+  background-color: rgb(32, 145, 197) !important;
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  text-align: center;
+  font-size: 32px;
+  width: 200px;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.navbar a {
+  position: relative;
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.navbar a::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: .3s;
+}
+
+.navbar a:hover::before {
+  width: 100%;
+}
+
+/************* Tab component   ************/
+
+.tab-container {
+  height: 90%;
+  width: 90%;
+  margin-top: 100px;
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, .1);
+  border-radius: 20px;
+}
+
+.tab_box {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid rgb(226, 226, 226);
+  position: relative;
+}
+
+.tab_box .tab_btn {
+  font-size: 18px;
+  font-weight: 600;
+  color: #919191;
+  background: none;
+  border: none;
+  padding: 18px;
+  cursor: pointer;
+}
+
+.tab_box .tab_btn.pressed {
+  color: rgb(71, 172, 219);
+}
+
+.content_box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  min-height: 100%;
+  max-width: 100%;
+}
+
+
+/************* Upload image component   ************/
+.upload-image-container {
+  min-width: 70%;
+  max-width: 500px;
+  background: #fff;
+  padding: 30px;
+  margin: 20px 10px;
+  border-radius: 30px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, .1);
+  border-radius: 20px;
+}
+
+.img-area {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  background: rgb(226, 223, 223);
+  margin-bottom: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.img-area p {
+  text-align: center;
+  margin: 10px;
+}
+
+.img-area i {
+  font-size: 50px;
+  padding-bottom: 20px;
+}
+
+.img-preview {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.select-image {
+  text-align: center;
+  display: block;
+  width: 100%;
+  padding: 16px 0;
+  border-radius: 15px;
+  background: rgb(2, 110, 233);
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.select-image:hover {
+  background: rgb(49, 49, 253);
+}
+
+/************* sample image component   ************/
+.sample-image-container {
+  max-width: 700px;
+  background: #fff;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin: 20px 10px;
+  border-radius: 30px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, .1);
+  border-radius: 20px;
+}
+
+.sample-image-container h2 {
+  padding-top: 20px;
+  text-align: center;
+  font-size: small;
+}
+
+.sample-image-container .sample-image {
+  border-radius: 10px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, .1);
+}
+
+.sample-image-container .sample-image:hover {
+  border: 3px solid rgb(19, 113, 156);
+}
+
+.sample-image-selected {
+  border: 3px solid rgb(21, 102, 207);
+}
+
+/************* text area component   ************/
+.text-area-container {
+  height: 300px;
+  min-width: 70%;
+  max-width: 600px;
+  background: #fff;
+  margin-top: 20px;
+  padding: 20px;
+  padding-bottom: 0px;
+  border-radius: 30px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, .1);
+  border-radius: 20px;
+}
+
+.text-area-container .text-area {
+  font-size: medium;
+  width: 100%;
+  height: 70%;
+  border-radius: 10px;
+  padding: 20px;
+  direction: rtl;
+}
+
+.text-area-buttons {
+  padding-top: 10px;
+}
+
+.text-area-buttons .button {
+  padding: 10px;
+  margin-right: 5px;
+  margin-bottom: 0;
+  border-radius: 5px;
+  border: none !important;
+  color: white !important;
+  background-color: rgb(2, 110, 233);
+  font-weight: 400;
+  cursor: pointer;
+
+}
+
+.text-area-buttons .button:hover {
+  background-color: rgb(49, 49, 253);
+}
+
+.text-area-buttons .green {
+  background-color: rgb(21, 179, 21) !important;
+}
+
+.text-area-buttons .green:hover {
+  background-color: rgb(16, 134, 16) !important;
+}
+
+.waiting {
+  padding: 5px;
+  color: green !important;
+}
+
+/************* minimum media   ************/
+
+@media screen and (min-width: 800px) {
+  .App {
+    height: 140vh;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+  .App {
+    height: 115%;
+  }
+
+  .tab-container {
+    padding: 10px;
+  }
+
+}
